@@ -1,0 +1,2 @@
+# step-hardware
+STEP Monorepo
