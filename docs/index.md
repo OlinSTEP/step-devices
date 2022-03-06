@@ -1,7 +1,7 @@
 ---
 nav:
   - title: KiCad
-    url: /kicad
+    url: /kicad.md
 ---
 
 # Welcome to the STEP Hardware Repository
