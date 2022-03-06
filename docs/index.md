@@ -1,8 +1,10 @@
 ---
 title: Home
 nav:
-  - title: KiCad
-    url: /kicad.md
+  - title: Welcome!
+    url: /step-hardware#welcome-to-the-step-hardware-repository
+  - title: Special Thanks
+    url: /step-hardware#special-thanks-to
 ---
 
 # Welcome to the STEP Hardware Repository

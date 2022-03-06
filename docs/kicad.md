@@ -5,9 +5,24 @@ nav:
     url: /kicad#how-to-create-a-new-component
     subnav:
       - title: Make a new branch
-        url: /kicad#make-a-new-branch
-      - title: Start making a new part (checkout the KiCad documentation)
-        url: /kicad#start-making-a-new-part
+        url: /step-hardware/kicad#make-a-new-branch
+      - title: Start making a new part
+        url: /step-hardware/kicad#start-making-a-new-part
+	  - title: Some special considerations...
+	    url: /step-hardware/kicad#some-special-considerations
+	    subnav:
+	      - title: Using existing parts
+	        url: /step-hardware/kicad#if-a-similar-part-exists-already-use-it
+		  - title: Setting symbol properties
+		    url: /step-hardware/kicad#setting-symbol-properties
+		  - title: Making symbol properties invisible
+		    url: /step-hardware/kicad#making-symbol-properties-visibleinvisible
+		  - title: Adding keywords
+		    url: /step-hardware/kicad#adding-keywords
+		  - title: Making new pins
+		    url: /step-hardware/kicad#making-new-pins
+	  - title: Save your new part
+	    url: /step-hardware/kicad#save-your-new-part
 ---
 
 # Schematics, PCBs, and KiCad
@@ -29,7 +44,7 @@ git checkout -b [new_branch_name]
 
 The creators of KiCad have already made some awesome documentation about using their product. So rather than try to replicate what they've done, you should check them out! Here's a link to the documentation on creating a new schematic symbol: <https://docs.kicad.org/5.1/en/getting_started_in_kicad/getting_started_in_kicad.html#make-schematic-symbols-in-kicad>.
 
-### Some special considerations
+### Some special considerations...
 
 In addition to what the KiCad documentation says, there are a few special things we like to add to our components which makes them easier to use in KiCad and purchase when it comes time for fabrication.
 
