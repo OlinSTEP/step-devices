@@ -1,5 +1,5 @@
 global_nav:
     - title: Home
-      url: /index.md
+      url: /step-hardware
     - title: KiCad
-      url: /kicad.md
+      url: /step-hardware/kicad
