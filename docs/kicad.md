@@ -1,3 +1,14 @@
+---
+nav:
+  - title: How to create a new component
+    url: /kicad#how-to-create-a-new-component
+    subnav:
+      - title: Make a new branch
+        url: /kicad#make-a-new-branch
+      - title: Start making a new part (checkout the KiCad documentation)
+        url: /kicad#start-making-a-new-part
+---
+
 # Schematics, PCBs, and KiCad
 
 ## How to create a new component
