@@ -1,9 +1,10 @@
+<p>Navigation</p>
 <ul>
-  {% for item in include.nav %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+	{% for item in site.data.navigation.global_nav %}
+    	<li><a href="{{ item.url }}">{{ item.title }}</a></li>
 
-    {% if item.subnav %}
-      {% include nav.html nav=item.subnav %}
-    {% endif %}
-  {% endfor %}
+    	{% if item.title == page.title %}
+      		{% include recursive_nav.html nav=page.nav %}
+    	{% endif %}
+  	{% endfor %}
 </ul>

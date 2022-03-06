@@ -1,0 +1,5 @@
+global_nav:
+    - title: Home
+      url: /index.md
+    - title: KiCad
+      url: /kicad.md

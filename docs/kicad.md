@@ -1,4 +1,5 @@
 ---
+title: KiCad
 nav:
   - title: How to create a new component
     url: /kicad#how-to-create-a-new-component

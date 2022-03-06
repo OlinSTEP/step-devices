@@ -1,4 +1,5 @@
 ---
+title: Home
 nav:
   - title: KiCad
     url: /kicad.md
