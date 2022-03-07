@@ -1,12 +1,3 @@
----
-title: Home
-nav:
-  - title: Welcome!
-    url: /step-hardware#welcome-to-the-step-hardware-repository
-  - title: Special Thanks
-    url: /step-hardware#special-thanks-to
----
-
 # Welcome to the STEP Hardware Repository
 [Insert brief description about STEP.]
 
