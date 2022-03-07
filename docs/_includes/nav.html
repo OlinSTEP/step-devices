@@ -2,8 +2,8 @@
 <strong>Navigation</strong>
 <ul>
 	{% for item in site.data.navigation.global_nav %}
-    	<li><a href="{{ item.url }}">{{ page.title }}</a></li>
-
+    	<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+		<li>{{ page.title }}</li>
     	{% if item.title == page.title %}
       		{% include recursive_nav.html nav=page.nav %}
     	{% endif %}
