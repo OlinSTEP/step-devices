@@ -1,5 +1,52 @@
 # Schematics, PCBs, and KiCad
 
+## How to setup KiCad
+In STEP, we use an open source electronic design automation tool called KiCad to design all of the hardware we use. In the following section, you'll learn how to setup KiCad so you can have access to all of the work we've already one.
+
+### Install KiCad
+Installing KiCad is different on every computer. For the most up to date information checkout the [KiCad website](https://www.kicad.org/download/).
+
+### Setting up the library
+
+The following steps assume you've already cloned the git repository on to your own computer. First we are going to create an environment variable in KiCad which contains the location of the `step-hardware` repository. This will be useful in later steps when we'll need to refer to that location.
+
+1. Open up KiCad
+2. Click on `Preferences` tab in the top menu bar
+3. Click on `Configure Paths...`
+4. At this point a new menu should have popped up called `Environment Vairbales`. Click on the plus button in the bottom left corner to add a new environment variable to the list
+5. Fill out the `Name` column for the new environment variable. We recommend using the name `STEP_DIR`
+6. Fill out the `Path` column for the new environment variable with the path to the `step-hardware` repository. It should look something like `/home/username/step-hardware`
+7. Press the `Ok` button in the bottom right corner to save the changes and close the menu
+
+If everything has worked, at this point you've successfully created a new environment variable in KiCad which points to the STEP repository. Now we'll add the symbols library in the STEP repository to the list of global libraries in KiCad.
+
+8. Click on `Preferences` tab in the top menu bar
+9. Click on `Manage Symbol Libraries...`
+10. At this point a new menu should have popped up called `Libraries by Scope`. Click on the `Global Libraries` tab to make sure you are looking at the list of global libraries
+11. Click on the plus icon under the bottom left side of the table
+12. Fill out the `Nickname` column for the new library. We recommend using the name `STEP_Symbols`
+13. Fill out the `Library Path` column with the following: `${STEP_DIR}/parts/symbols/STEP_Symbols.lib` (*note*: if you named the environment variable anything other than `STEP_DIR` replace `STEP_DIR` with that name)
+14. Make sure the `Plugin Type` is set to `Legacy` and the `Options` column is left blank
+15. Optionally, fill out the `Description` column with a description of your choosing
+16. Press the `Ok` button in the bottom right corner to save your changes and close the menu
+
+
+If everything has worked, at this point you've successfully loaded the STEP symbols library into KiCad. Now we'll add the footprints library in the STEP repository to the list of global libraries in KiCad.
+
+
+17. Click on `Preferences` tab in the top menu bar
+18. Click on `Manage Footprint Libraries...`
+19. At this point a new menu should have popped up called `Libraries by Scope`. Click on the `Global Libraries` tab to make sure you are looking at the list of global libraries
+20. Click on the plus icon under the bottom left side of the table
+21. Fill out the `Nickname` column for the new library. We recommend using the name `STEP_Footprints`
+22. Fill out the `Library Path` column with the following: `${STEP_DIR}/parts/footprints/STEP_Footprints.pretty` (*note*: if you named the environment variable anything other than `STEP_DIR` replace `STEP_DIR` with that name)
+23. Make sure the `Plugin Type` is set to `KiCad` and the `Options` column is left blank
+24. Optionally, fill out the `Description` column with a description of your choosing
+25. Press the `Ok` button in the bottom right corner to save your changes and close the menu
+
+
+If everything has worked, at this point you've successfully loaded the STEP footprints library into KiCad.
+
 ## How to create a new component
 Are you working on a schematic but can't find the component you want use in the `STEP_Symbols` library? Well look no further! In this tutorial, we'll walk through the process of making a new KiCad part (or modifying an existing one) and adding it to the `STEP_Symbols` library!
 
