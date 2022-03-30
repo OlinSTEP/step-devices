@@ -82,7 +82,7 @@ Every symbol in KiCad has a set of symbol properties. By default, this includes 
  * [Datasheet](): A link to the datasheet associated with the part (e.g. `https://ww1.microchip.com/downloads/en/DeviceDoc/MCP73831-Family-Data-Sheet-DS20001984H.pdf`).
   * [Manufacturer](): The name of the manufacturer (e.g. `Analog Devices`).
   * [MPN](): The full part number as specified by the manufacturer (e.g. `STM32F439BIT6`).
-  * [Vendor](): The name of the vendor who is selling the part (e.g. `DigiKey`, `Mouser`).
+  * [Vendor](): The name of the vendor who is selling the part (e.g. `Digi-Key`, `Mouser`).
   * [VPN](): The part number as specified by the vendor (e.g. `497-17468-ND`).
   * [Link](): A url to where we can purchase the part (e.g. `https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F439BIT6/5268309`).
   
