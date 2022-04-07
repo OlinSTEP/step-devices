@@ -471,3 +471,89 @@ make: *** [Makefile:121: cmTC_0a61d/fast] Error 2
 
 
 
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-none-eabi-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+/build/newlib-CVVEyx/newlib-3.3.0/build/arm-none-eabi/newlib/libc/stdlib/../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-none-eabi-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+/build/newlib-CVVEyx/newlib-3.3.0/build/arm-none-eabi/newlib/libc/stdlib/../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/sam/step-devices/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_22f18/fast && /usr/bin/make -f CMakeFiles/cmTC_22f18.dir/build.make CMakeFiles/cmTC_22f18.dir/build
+make[1]: Entering directory '/home/sam/step-devices/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_22f18.dir/testCCompiler.c.obj
+/usr/bin/arm-none-eabi-gcc    -o CMakeFiles/cmTC_22f18.dir/testCCompiler.c.obj   -c /home/sam/step-devices/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_22f18
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22f18.dir/link.txt --verbose=1
+/usr/bin/arm-none-eabi-gcc      CMakeFiles/cmTC_22f18.dir/testCCompiler.c.obj  -o cmTC_22f18 
+/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+/build/newlib-CVVEyx/newlib-3.3.0/build/arm-none-eabi/newlib/libc/stdlib/../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_22f18.dir/build.make:87: cmTC_22f18] Error 1
+make[1]: Leaving directory '/home/sam/step-devices/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_22f18/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-none-eabi-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+/build/newlib-CVVEyx/newlib-3.3.0/build/arm-none-eabi/newlib/libc/stdlib/../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-none-eabi-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+/build/newlib-CVVEyx/newlib-3.3.0/build/arm-none-eabi/newlib/libc/stdlib/../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/sam/step-devices/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_998b0/fast && /usr/bin/make -f CMakeFiles/cmTC_998b0.dir/build.make CMakeFiles/cmTC_998b0.dir/build
+make[1]: Entering directory '/home/sam/step-devices/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_998b0.dir/testCCompiler.c.obj
+/usr/bin/arm-none-eabi-gcc    -o CMakeFiles/cmTC_998b0.dir/testCCompiler.c.obj   -c /home/sam/step-devices/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_998b0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_998b0.dir/link.txt --verbose=1
+/usr/bin/arm-none-eabi-gcc      CMakeFiles/cmTC_998b0.dir/testCCompiler.c.obj  -o cmTC_998b0 
+/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+/build/newlib-CVVEyx/newlib-3.3.0/build/arm-none-eabi/newlib/libc/stdlib/../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_998b0.dir/build.make:87: cmTC_998b0] Error 1
+make[1]: Leaving directory '/home/sam/step-devices/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_998b0/fast] Error 2
+
+
+
