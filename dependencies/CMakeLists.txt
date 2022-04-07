@@ -7,4 +7,13 @@ FetchContent_Declare(cmsis_device_wb
 	BUILD_COMMAND ""
 )
 
+FetchContent_Declare(cmsis_core
+	GIT_REPOSITORY git@github.com:STMicroelectronics/cmsis_core.git
+	GIT_TAG 96d6da4e252b06dcfdc041e7df23e86161c33007
+	CONFIGURE_COMMAND ""
+	BUILD_COMMAND ""
+)
+
+
+add_subdirectory(cmsis_core)
 add_subdirectory(cmsis_device_wb)

@@ -1,6 +1,10 @@
 FetchContent_GetProperties(cmsis_device_wb)
 if (NOT cmsis_device_wb_POPULATED)
 	FetchContent_Populate(cmsis_device_wb)
-endif()
-
-include_directories(${cmsis_device_wb}/Include/)
+	include_directories(${cmsis_device_wb_SOURCE_DIR}/Include/)
+	#add_executable(system_stm32wbxx ${cmsis_device_wb_SOURCE_DIR}/Source/Templates/system_stm32wbxx.c)
+	#add_executable(startup_stm32wb55xx_cm4 ${cmsis_device_wb_SOURCE_DIR}/Source/Templates/gcc/startup_stm32wb55xx_cm4.s)
+	set(EXTERNAL_EXECUTABLES ${EXTERNAL_EXECUTABLES} system_stm32wbxx.c)
+	set(EXTERNAL_EXECUTABLES ${EXTERNAL_EXECUTABLES} startup_stm32wb55xx_cm4.s)
+	
+	endif()
