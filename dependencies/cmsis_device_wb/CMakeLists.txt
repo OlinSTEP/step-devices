@@ -1,10 +1,19 @@
 FetchContent_GetProperties(cmsis_device_wb)
 if (NOT cmsis_device_wb_POPULATED)
 	FetchContent_Populate(cmsis_device_wb)
-	include_directories(${cmsis_device_wb_SOURCE_DIR}/Include/)
-	#add_executable(system_stm32wbxx ${cmsis_device_wb_SOURCE_DIR}/Source/Templates/system_stm32wbxx.c)
-	#add_executable(startup_stm32wb55xx_cm4 ${cmsis_device_wb_SOURCE_DIR}/Source/Templates/gcc/startup_stm32wb55xx_cm4.s)
-	set(EXTERNAL_EXECUTABLES ${EXTERNAL_EXECUTABLES} system_stm32wbxx.c)
-	set(EXTERNAL_EXECUTABLES ${EXTERNAL_EXECUTABLES} startup_stm32wb55xx_cm4.s)
-	
-	endif()
+	add_library(cmsis_device_wb INTERFACE)
+	target_include_directories(cmsis_device_wb
+		INTERFACE ${cmsis_device_wb_SOURCE_DIR}/Include
+	)
+	target_compile_definitions(cmsis_device_wb
+		INTERFACE -DSTM32WB55xx
+	)
+	add_library(stm32wb OBJECT 
+		${cmsis_device_wb_SOURCE_DIR}/Source/Templates/system_stm32wbxx.c
+		${cmsis_device_wb_SOURCE_DIR}/Source/Templates/gcc/startup_stm32wb55xx_cm4.s
+	)
+	target_link_libraries(stm32wb
+		PRIVATE cmsis_device_wb
+		PRIVATE cmsis_core
+	)
+endif()
