@@ -7,14 +7,14 @@ if (NOT cmsis_device_wb_POPULATED)
 		INTERFACE ${cmsis_device_wb_SOURCE_DIR}/Include
 	)
 	target_compile_definitions(cmsis_device_wb
-		INTERFACE -DSTM32WB55xx
+		INTERFACE -D${MCU_UPPER_LONG}
 	)
 	target_link_libraries(cmsis_device_wb
 		INTERFACE cmsis_core
 	)
 	add_library(stm32wb OBJECT 
-		${cmsis_device_wb_SOURCE_DIR}/Source/Templates/system_stm32wbxx.c
-		${cmsis_device_wb_SOURCE_DIR}/Source/Templates/gcc/startup_stm32wb55xx_cm4.s
+		${cmsis_device_wb_SOURCE_DIR}/Source/Templates/system_${MCU_LOWER_SHORT}.c
+		${cmsis_device_wb_SOURCE_DIR}/Source/Templates/gcc/startup_${MCU_LOWER_LONG}_cm4.s
 	)
 	target_link_libraries(stm32wb
 		PRIVATE cmsis_device_wb

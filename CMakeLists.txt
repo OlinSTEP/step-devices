@@ -8,6 +8,9 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_CXX_EXTENSIONS NO)
+set(MCU_UPPER_LONG "STM32WB55xx")
+set(MCU_LOWER_LONG "stm32wb55xx")
+set(MCU_LOWER_SHORT "stm32wbxx")
 
 # enable asm for stm startup.s file
 enable_language(ASM)
