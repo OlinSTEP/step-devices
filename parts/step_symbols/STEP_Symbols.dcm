@@ -256,6 +256,12 @@ $CMP C_4.7uF
 D Capacitor, 4.7uF, 6.3V, 10%, 0603
 $ENDCMP
 #
+$CMP C_4.7uF_0402
+D 4.7uF 6.3V 20% 0402 MLCC Cap
+K 4.7uF 6.3V 20% 0402 MLCC Cap
+F https://www.mouser.com/datasheet/2/281/1/GRM155R60J475ME87_01A-1983790.pdf
+$ENDCMP
+#
 $CMP C_4.7uF_25V
 D Capacitor, 4.7uF, 25V, 10%, 0805
 F http://www.samsungsem.com/kr/support/product-search/mlcc/CL21A475KAQNNNE.jsp
@@ -415,6 +421,12 @@ $CMP LR8K4-G
 D Linear regulator, 13.2-450V input, adj 1.2-438V output, 20mA
 $ENDCMP
 #
+$CMP LSM6DSO32TR
+D 6DoF Low Power Accel + Gyro
+K 6DoF Low Power Accel + Gyro
+F https://www.st.com/resource/en/datasheet/lsm6dso32.pdf
+$ENDCMP
+#
 $CMP LT3045
 D Linear Regulator 20V adjustable
 F https://www.analog.com/media/en/technical-documentation/data-sheets/LT3045.pdf
@@ -455,6 +467,17 @@ $ENDCMP
 #
 $CMP L_100uH
 F https://product.tdk.com/info/en/catalog/datasheets/inductor_commercial_decoupling_nlfv32-ef_en.pdf
+$ENDCMP
+#
+$CMP L_10nH_LQG15WZ10NJ02D
+D 10nH RF inductor
+K 10nH RF inductor
+F https://search.murata.co.jp/Ceramy/image/img/P02/JELF243B-9117.pdf
+$ENDCMP
+#
+$CMP L_10uH_LQM21FN100M70L
+D 10uH 0805 Inductor
+F https://www.mouser.com/datasheet/2/281/JELF243B-0011-1633795.pdf
 $ENDCMP
 #
 $CMP L_15uH

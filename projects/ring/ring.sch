@@ -39,23 +39,6 @@ F 3 "" H 2225 7625 60  0000 C CNN
 	1    2225 7625
 	1    0    0    -1  
 $EndComp
-$Comp
-L step:NN02-101 E1
-U 1 1 624EF09F
-P 3925 7525
-F 0 "E1" H 4050 7622 50  0000 L CNN
-F 1 "NN02-101" H 4050 7531 50  0000 L CNN
-F 2 "step-footprints:XCVR_NN02-101" H 3925 7525 50  0001 L BNN
-F 3 "" H 3925 7525 50  0001 L BNN
-F 4 "Ignion" H 3925 7525 50  0001 L BNN "MANUFACTURER"
-F 5 "0.8mm" H 3925 7525 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
-F 6 "May 2021" H 3925 7525 50  0001 L BNN "PARTREV"
-F 7 "Manufacturer recommendations" H 3925 7525 50  0001 L BNN "STANDARD"
-	1    3925 7525
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3675 7725 3925 7725
 Wire Wire Line
 	2325 7725 2275 7725
 Text Label 2275 7725 2    50   ~ 0
@@ -85,47 +68,560 @@ F 3 "" H 2825 8250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	1850 6950 5000 6950
-Wire Notes Line
-	5000 6950 5000 8875
-Wire Notes Line
-	5000 8875 1850 8875
-Wire Notes Line
 	1850 8875 1850 6950
 Text Notes 1825 6925 0    157  ~ 0
 RF
 $Comp
 L step:NX1612SA-32.000MHZ-CHP-CIS-3 Y1
 U 1 1 6250E0C6
-P 3875 2775
-F 0 "Y1" H 3625 2575 50  0000 C CNN
-F 1 "NX1612SA-32.000MHZ-CHP-CIS-3" H 3100 2675 50  0000 C CNN
-F 2 "OSCSC105P160X120X35-4N" H 3525 3025 50  0001 L BNN
-F 3 "" H 3875 2775 50  0001 L BNN
-F 4 "NDK" H 3875 2775 50  0001 L BNN "MANUFACTURER"
-	1    3875 2775
-	1    0    0    -1  
+P 6475 4375
+F 0 "Y1" H 6225 4175 50  0000 C CNN
+F 1 "NX1612SA-32.000MHZ-CHP-CIS-3" H 5700 4275 50  0000 C CNN
+F 2 "step-footprints:OSCSC105P160X120X35-4N" H 6125 4625 50  0001 L BNN
+F 3 "" H 6475 4375 50  0001 L BNN
+F 4 "NDK" H 6475 4375 50  0001 L BNN "MANUFACTURER"
+	1    6475 4375
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3625 2775 3625 2600
+	6725 4375 6725 4200
 Wire Wire Line
-	3625 2600 4125 2600
+	6725 4200 6225 4200
 Wire Wire Line
 	4125 2600 4125 2675
 Wire Wire Line
-	3825 3075 3875 3075
+	6525 4675 6475 4675
 $Comp
 L power:GND #PWR0102
 U 1 1 6250FE22
-P 3875 3075
-F 0 "#PWR0102" H 3875 2825 50  0001 C CNN
-F 1 "GND" H 3880 2902 50  0000 C CNN
-F 2 "" H 3875 3075 50  0001 C CNN
-F 3 "" H 3875 3075 50  0001 C CNN
-	1    3875 3075
+P 6475 4675
+F 0 "#PWR0102" H 6475 4425 50  0001 C CNN
+F 1 "GND" H 6480 4502 50  0000 C CNN
+F 2 "" H 6475 4675 50  0001 C CNN
+F 3 "" H 6475 4675 50  0001 C CNN
+	1    6475 4675
+	-1   0    0    -1  
+$EndComp
+Connection ~ 6475 4675
+Wire Wire Line
+	6475 4675 6425 4675
+$Comp
+L step:L_10nH_LQG15WZ10NJ02D L2
+U 1 1 625020EA
+P 8375 2575
+F 0 "L2" H 8350 2525 50  0000 C CNN
+F 1 "L_10nH_LQG15WZ10NJ02D" H 8225 2350 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 8375 2575 50  0001 C CNN
+F 3 "https://search.murata.co.jp/Ceramy/image/img/P02/JELF243B-9117.pdf" H 8375 2575 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/LQG15WZ10NJ02D/490-15244-1-ND/6799909?curr=usd&utm_campaign=buynow&utm_medium=aggregator&utm_source=octopart" H 8375 2575 50  0001 C CNN "buy"
+	1    8375 2575
 	1    0    0    -1  
 $EndComp
-Connection ~ 3875 3075
+$Comp
+L step:L_10uH_LQM21FN100M70L L1
+U 1 1 62504212
+P 8025 2575
+F 0 "L1" H 8000 2525 50  0000 C CNN
+F 1 "L_10uH_LQM21FN100M70L" H 8125 2450 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 8025 2575 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/281/JELF243B-0011-1633795.pdf" H 8025 2575 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Murata-Electronics/LQM21FN100M70L?qs=8M15sSGRUn%252BogwBrvQUwLA%3D%3D" H 8025 2575 50  0001 C CNN "buy"
+	1    8025 2575
+	1    0    0    -1  
+$EndComp
+$Comp
+L step:LSM6DSO32TR U2
+U 1 1 6250AC73
+P 7875 7550
+F 0 "U2" H 8225 7875 60  0000 C CNN
+F 1 "LSM6DSO32TR" H 8225 7750 60  0000 C CNN
+F 2 "step-footprints:LSM6DSO32TR" H 8625 8350 60  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/lsm6dso32.pdf" H 7875 7550 60  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/stmicroelectronics/LSM6DSO32TR/11694177" H 8825 8250 50  0001 C CNN "buy"
+	1    7875 7550
+	1    0    0    -1  
+$EndComp
+Text Label 6125 3175 0    50   ~ 0
+LSM_INT1
+Text Label 6125 3275 0    50   ~ 0
+LSM_INT2
+Text Label 9425 7800 0    50   ~ 0
+LSM_INT1
+Text Label 9425 7700 0    50   ~ 0
+LSM_INT2
+NoConn ~ 9425 8000
+NoConn ~ 9425 8100
 Wire Wire Line
-	3875 3075 3925 3075
+	8625 8650 8675 8650
+$Comp
+L power:GND #PWR0103
+U 1 1 624F9D6F
+P 8675 8650
+F 0 "#PWR0103" H 8675 8400 50  0001 C CNN
+F 1 "GND" H 8800 8550 50  0000 C CNN
+F 2 "" H 8675 8650 50  0001 C CNN
+F 3 "" H 8675 8650 50  0001 C CNN
+	1    8675 8650
+	1    0    0    -1  
+$EndComp
+Connection ~ 8675 8650
+Wire Wire Line
+	8675 8650 8725 8650
+Text Notes 9500 8075 0    50   ~ 0
+Can be connected to any STM GPIO \nand used to wake from sleep mode \nvia the EXTI Interrupt
+$Comp
+L power:+BATT #PWR0104
+U 1 1 624FC31F
+P 8625 2000
+F 0 "#PWR0104" H 8625 1850 50  0001 C CNN
+F 1 "+BATT" H 8640 2173 50  0000 C CNN
+F 2 "" H 8625 2000 50  0001 C CNN
+F 3 "" H 8625 2000 50  0001 C CNN
+	1    8625 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L step:C_4.7uF C9
+U 1 1 624FDEFD
+P 8575 2200
+F 0 "C9" H 8600 2325 50  0000 L CNN
+F 1 "C_4.7uF" V 8750 2075 50  0000 L CNN
+F 2 "Capacitor_SMD:C_01005_0402Metric" H 8663 1600 50  0001 C CNN
+F 3 "" H 8650 1850 50  0001 C CNN
+F 4 "" H 8575 1400 50  0001 C CNN "Manufacturer"
+F 5 "" H 8575 1300 50  0001 C CNN "MPN"
+F 6 "Mouser" H 8625 1800 50  0001 C CNN "Vendor"
+F 7 "1276-1244-1-ND" H 8625 1700 50  0001 C CNN "VPN"
+F 8 "https://www.mouser.com/ProductDetail/Murata-Electronics/GRM155R60J475ME87D?qs=pTGEtN%252BMLlBnU9jM8bPB0Q%3D%3D" H 9050 1500 60  0001 C CNN "Buy"
+	1    8575 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7775 2000 8375 2000
+Connection ~ 8575 2000
+Wire Wire Line
+	8575 2000 8625 2000
+$Comp
+L step:C_100nF C8
+U 1 1 62500103
+P 8375 2150
+F 0 "C8" H 8400 2225 50  0000 L CNN
+F 1 "C_100nF" V 8225 1950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8413 2000 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 8400 2250 50  0001 C CNN
+F 4 "KEMET" H 8375 2150 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 8375 2150 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 8800 2650 60  0001 C CNN "buy"
+	1    8375 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 8375 2000
+Wire Wire Line
+	8375 2000 8575 2000
+Wire Wire Line
+	8125 2575 8275 2575
+Wire Wire Line
+	8475 2575 8600 2575
+Wire Wire Line
+	8600 2575 8600 2475
+Wire Wire Line
+	8600 2475 7825 2475
+Connection ~ 8600 2575
+Wire Wire Line
+	8600 2575 8700 2575
+$Comp
+L step:C_4.7uF C7
+U 1 1 6250555B
+P 8700 2775
+F 0 "C7" H 8725 2900 50  0000 L CNN
+F 1 "C_4.7uF" V 8875 2650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_01005_0402Metric" H 8788 2175 50  0001 C CNN
+F 3 "" H 8775 2425 50  0001 C CNN
+F 4 "" H 8700 1975 50  0001 C CNN "Manufacturer"
+F 5 "" H 8700 1875 50  0001 C CNN "MPN"
+F 6 "Mouser" H 8750 2375 50  0001 C CNN "Vendor"
+F 7 "1276-1244-1-ND" H 8750 2275 50  0001 C CNN "VPN"
+F 8 "https://www.mouser.com/ProductDetail/Murata-Electronics/GRM155R60J475ME87D?qs=pTGEtN%252BMLlBnU9jM8bPB0Q%3D%3D" H 9175 2075 60  0001 C CNN "Buy"
+	1    8700 2775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 62505CA0
+P 8700 2875
+F 0 "#PWR0105" H 8700 2625 50  0001 C CNN
+F 1 "GND" H 8705 2702 50  0000 C CNN
+F 2 "" H 8700 2875 50  0001 C CNN
+F 3 "" H 8700 2875 50  0001 C CNN
+	1    8700 2875
+	1    0    0    -1  
+$EndComp
+Text Notes 8875 2575 0    50   ~ 0
+Inductors for \nOn-Die SMPS
+Wire Wire Line
+	6125 1975 6125 1875
+Connection ~ 6125 1875
+Wire Wire Line
+	6125 1875 6125 1775
+Wire Wire Line
+	6125 2075 6125 1975
+Connection ~ 6125 1975
+Wire Wire Line
+	6125 1775 6325 1775
+$Comp
+L step:C_100nF C5
+U 1 1 62507FB9
+P 6725 1925
+F 0 "C5" H 6750 2000 50  0000 L CNN
+F 1 "C_100nF" H 6575 2150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6763 1775 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 6750 2025 50  0001 C CNN
+F 4 "KEMET" H 6725 1925 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 6725 1925 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 7150 2425 60  0001 C CNN "buy"
+	1    6725 1925
+	1    0    0    -1  
+$EndComp
+Connection ~ 6725 1775
+Wire Wire Line
+	6725 1775 6925 1775
+$Comp
+L step:C_100nF C6
+U 1 1 62508D05
+P 6925 1925
+F 0 "C6" H 6950 2000 50  0000 L CNN
+F 1 "C_100nF" V 7100 1800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6963 1775 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 6950 2025 50  0001 C CNN
+F 4 "KEMET" H 6925 1925 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 6925 1925 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 7350 2425 60  0001 C CNN "buy"
+	1    6925 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L step:C_100nF C2
+U 1 1 625095B1
+P 6525 1925
+F 0 "C2" H 6550 2000 50  0000 L CNN
+F 1 "C_100nF" H 6375 2225 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6563 1775 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 6550 2025 50  0001 C CNN
+F 4 "KEMET" H 6525 1925 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 6525 1925 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 6950 2425 60  0001 C CNN "buy"
+	1    6525 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L step:C_100nF C1
+U 1 1 62509D0B
+P 6325 1925
+F 0 "C1" H 6350 2000 50  0000 L CNN
+F 1 "C_100nF" H 6175 2150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6363 1775 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 6350 2025 50  0001 C CNN
+F 4 "KEMET" H 6325 1925 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 6325 1925 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 6750 2425 60  0001 C CNN "buy"
+	1    6325 1925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6325 2075 6525 2075
+Connection ~ 6525 2075
+Wire Wire Line
+	6525 2075 6725 2075
+Connection ~ 6725 2075
+Wire Wire Line
+	6725 2075 6925 2075
+Connection ~ 6325 1775
+Wire Wire Line
+	6325 1775 6525 1775
+Connection ~ 6525 1775
+Wire Wire Line
+	6525 1775 6725 1775
+Connection ~ 6925 1775
+Wire Wire Line
+	6925 1775 6975 1775
+Connection ~ 6125 1775
+$Comp
+L power:GND #PWR0107
+U 1 1 62515C16
+P 6925 2075
+F 0 "#PWR0107" H 6925 1825 50  0001 C CNN
+F 1 "GND" H 7050 2000 50  0000 C CNN
+F 2 "" H 6925 2075 50  0001 C CNN
+F 3 "" H 6925 2075 50  0001 C CNN
+	1    6925 2075
+	1    0    0    -1  
+$EndComp
+Connection ~ 6925 2075
+$Comp
+L step:ANT016008LCS2442MA2 U3
+U 1 1 6251D782
+P 6125 7725
+F 0 "U3" H 7150 8012 60  0000 C CNN
+F 1 "ANT016008LCS2442MA2" H 7150 7906 60  0000 C CNN
+F 2 "step-footprints:ANT016008LCS2442MA2" H 7175 7865 60  0001 C CNN
+F 3 "https://product.tdk.com/system/files/dam/doc/product/rf/rf/antenna/catalog/rf_ant_ant016008lcs2442ma2_summary_en.pdf" H 6125 7725 60  0001 C CNN
+F 4 "https://product.tdk.com/system/files/dam/doc/product/rf/rf/antenna/design_note/dn-ant016008lcs2442ma2.pdf" H 6125 7725 50  0001 C CNN "eval_guide"
+F 5 "https://www.digikey.com/en/products/detail/tdk-corporation/ANT016008LCS2442MA2/4959425" H 6125 7725 50  0001 C CNN "buy"
+	1    6125 7725
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3675 7725 4075 7725
+Text Label 6125 7725 0    50   ~ 0
+rad_plane
+NoConn ~ 4975 8675
+NoConn ~ 5075 8675
+NoConn ~ 5175 8675
+NoConn ~ 5275 8675
+Wire Notes Line
+	6625 8875 6625 6950
+Wire Notes Line
+	1850 8875 6625 8875
+Wire Notes Line
+	1850 6950 6625 6950
+Wire Wire Line
+	6125 4275 6225 4275
+Wire Wire Line
+	6225 4275 6225 4200
+Wire Wire Line
+	6225 4375 6125 4375
+Text Label 4125 4475 2    50   ~ 0
+SWDIO
+Text Label 4125 4575 2    50   ~ 0
+SWCLK
+Text Label 4125 3575 2    50   ~ 0
+CS
+Text Label 4125 3675 2    50   ~ 0
+SCK
+Text Label 4125 3775 2    50   ~ 0
+MISO
+Text Label 4125 3875 2    50   ~ 0
+MOSI
+Text Label 7875 8150 2    50   ~ 0
+MISO
+Text Label 7875 7550 2    50   ~ 0
+CS
+Text Label 7875 7750 2    50   ~ 0
+SCK
+Text Label 7875 8050 2    50   ~ 0
+MOSI
+Wire Wire Line
+	7875 7950 7550 7950
+Wire Wire Line
+	7550 7950 7550 8250
+Wire Wire Line
+	7550 8250 7875 8250
+$Comp
+L power:GND #PWR0108
+U 1 1 62535713
+P 7550 8250
+F 0 "#PWR0108" H 7550 8000 50  0001 C CNN
+F 1 "GND" H 7555 8077 50  0000 C CNN
+F 2 "" H 7550 8250 50  0001 C CNN
+F 3 "" H 7550 8250 50  0001 C CNN
+	1    7550 8250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7550 8250
+$Comp
+L step:C_100nF C11
+U 1 1 6253612C
+P 9475 7300
+F 0 "C11" H 9500 7375 50  0000 L CNN
+F 1 "C_100nF" H 9625 7325 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9513 7150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 9500 7400 50  0001 C CNN
+F 4 "KEMET" H 9475 7300 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 9475 7300 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 9900 7800 60  0001 C CNN "buy"
+	1    9475 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L step:C_100nF C10
+U 1 1 62536BDD
+P 9275 7300
+F 0 "C10" H 9300 7375 50  0000 L CNN
+F 1 "C_100nF" H 9625 7250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9313 7150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 9300 7400 50  0001 C CNN
+F 4 "KEMET" H 9275 7300 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 9275 7300 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 9700 7800 60  0001 C CNN "buy"
+	1    9275 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8625 7150 8725 7150
+$Comp
+L power:+BATT #PWR0109
+U 1 1 62539577
+P 9475 7150
+F 0 "#PWR0109" H 9475 7000 50  0001 C CNN
+F 1 "+BATT" H 9625 7250 50  0000 C CNN
+F 2 "" H 9475 7150 50  0001 C CNN
+F 3 "" H 9475 7150 50  0001 C CNN
+	1    9475 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 6253B17D
+P 9375 7450
+F 0 "#PWR0110" H 9375 7200 50  0001 C CNN
+F 1 "GND" H 9500 7375 50  0000 C CNN
+F 2 "" H 9375 7450 50  0001 C CNN
+F 3 "" H 9375 7450 50  0001 C CNN
+	1    9375 7450
+	1    0    0    -1  
+$EndComp
+Connection ~ 9275 7150
+Wire Wire Line
+	9275 7150 9475 7150
+Connection ~ 9475 7150
+Wire Wire Line
+	8725 7150 9275 7150
+Connection ~ 8725 7150
+Wire Wire Line
+	9275 7450 9375 7450
+Connection ~ 9375 7450
+Wire Wire Line
+	9375 7450 9475 7450
+Wire Notes Line
+	7175 6950 10950 6950
+Wire Notes Line
+	10950 6950 10950 8875
+Wire Notes Line
+	10950 8875 7175 8875
+Wire Notes Line
+	7175 8875 7175 6950
+Text Notes 7125 6950 0    157  ~ 0
+Accelerometer
+Text Label 6125 4675 0    50   ~ 0
+BOOT0
+Wire Notes Line
+	7575 1750 9500 1750
+Wire Notes Line
+	9500 1750 9500 3125
+Wire Notes Line
+	9500 3125 7575 3125
+Wire Notes Line
+	7575 3125 7575 1750
+Text Notes 7575 1725 0    50   ~ 0
+STM smps
+$Comp
+L power:GND #PWR0111
+U 1 1 6254BFA4
+P 6125 5375
+F 0 "#PWR0111" H 6125 5125 50  0001 C CNN
+F 1 "GND" H 6130 5202 50  0000 C CNN
+F 2 "" H 6125 5375 50  0001 C CNN
+F 3 "" H 6125 5375 50  0001 C CNN
+	1    6125 5375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6125 5375 6125 5275
+Connection ~ 6125 5375
+Wire Wire Line
+	6125 5175 6125 5275
+Connection ~ 6125 5275
+$Comp
+L step:Test_Point_SMD TP1
+U 1 1 62552E8D
+P 9200 4725
+F 0 "TP1" V 9200 4900 50  0000 L CNN
+F 1 "Test_Point_SMD" V 9200 5075 50  0000 L CNN
+F 2 "footprints:Test_Point_SMD" H 9200 4575 50  0001 C CNN
+F 3 "" H 9200 4725 50  0001 C CNN
+	1    9200 4725
+	0    1    1    0   
+$EndComp
+$Comp
+L step:Test_Point_SMD TP2
+U 1 1 62553281
+P 9200 4875
+F 0 "TP2" V 9200 5050 50  0000 L CNN
+F 1 "Test_Point_SMD" V 9200 5225 50  0000 L CNN
+F 2 "footprints:Test_Point_SMD" H 9200 4725 50  0001 C CNN
+F 3 "" H 9200 4875 50  0001 C CNN
+	1    9200 4875
+	0    1    1    0   
+$EndComp
+$Comp
+L step:Test_Point_SMD TP3
+U 1 1 625542A1
+P 9200 5025
+F 0 "TP3" V 9200 5200 50  0000 L CNN
+F 1 "Test_Point_SMD" V 9200 5375 50  0000 L CNN
+F 2 "footprints:Test_Point_SMD" H 9200 4875 50  0001 C CNN
+F 3 "" H 9200 5025 50  0001 C CNN
+	1    9200 5025
+	0    1    1    0   
+$EndComp
+$Comp
+L step:Test_Point_SMD TP4
+U 1 1 6255531C
+P 9200 5175
+F 0 "TP4" V 9200 5350 50  0000 L CNN
+F 1 "Test_Point_SMD" V 9200 5525 50  0000 L CNN
+F 2 "footprints:Test_Point_SMD" H 9200 5025 50  0001 C CNN
+F 3 "" H 9200 5175 50  0001 C CNN
+	1    9200 5175
+	0    1    1    0   
+$EndComp
+$Comp
+L step:Test_Point_SMD TP5
+U 1 1 625563D4
+P 9200 5325
+F 0 "TP5" V 9200 5500 50  0000 L CNN
+F 1 "Test_Point_SMD" V 9200 5675 50  0000 L CNN
+F 2 "footprints:Test_Point_SMD" H 9200 5175 50  0001 C CNN
+F 3 "" H 9200 5325 50  0001 C CNN
+	1    9200 5325
+	0    1    1    0   
+$EndComp
+Text Label 9150 4725 2    50   ~ 0
+SWDIO
+Text Label 9150 4875 2    50   ~ 0
+SWCLK
+Text Label 9150 5025 2    50   ~ 0
+BOOT0
+Text Notes 6975 1650 0    50   ~ 0
+should be vreg
+$Comp
+L Battery_Management:BQ297xy U4
+U 1 1 6255AE0C
+P 10950 2075
+F 0 "U4" H 10950 2442 50  0000 C CNN
+F 1 "BQ297xy" H 10950 2351 50  0000 C CNN
+F 2 "Package_SON:WSON-6_1.5x1.5mm_P0.5mm" H 10950 2425 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 10700 2275 50  0001 C CNN
+	1    10950 2075
+	1    0    0    -1  
+$EndComp
+Text Notes 2600 7250 0    50   ~ 0
+Integrated Passive Device \nMatching, PI, LP Filter
+Text Notes 4375 7175 0    50   ~ 0
+SMD Chip Antenna 
+$Comp
+L power:GND #PWR0106
+U 1 1 6255E9DE
+P 9150 5325
+F 0 "#PWR0106" H 9150 5075 50  0001 C CNN
+F 1 "GND" H 9155 5152 50  0000 C CNN
+F 2 "" H 9150 5325 50  0001 C CNN
+F 3 "" H 9150 5325 50  0001 C CNN
+	1    9150 5325
+	1    0    0    -1  
+$EndComp
+Text Notes 11175 1675 0    50   ~ 0
+fets @sam 
+Text Notes 8750 5200 0    50   ~ 0
+power net 
 $EndSCHEMATC
