@@ -1,9 +1,9 @@
-# Preamble
+### Preamble
 cmake_minimum_required(VERSION 3.11)
 project(step-devices)
 
 
-# Project wide setup
+### Project wide setup
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
@@ -12,33 +12,34 @@ set(CMAKE_CXX_EXTENSIONS NO)
 # enable asm for stm startup.s file
 enable_language(ASM)
 
-set(COMPILER_OPTIMISATION "-Og")
-
-# Set custom flags for compiling and for the STM32
-set(STM32WB_ASM_OPTIONS "-x assembler-with-cpp -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp d16 -mfloat-abi=hard")
-set(CMAKE_ASM_FLAGS "${STM32WB_ASM_OPTIONS}" CACHE INTERNAL "asm compiler flags")
-
-set(STM32_COMPILER_OPTIONS " \
-    -mcpu=cortex-m4 \
-    -mthumb \
-    -mfpu=fpv4-sp d16 \
-    -mfloat-abi=hard \
-    -ffunction-sections \
-    -fdata-sections \
-    -Wall -Werror \
-    -Wl,-Map=output.map -Wl,--gc-sections \
-    -lm -lc"
+# set variable for typically used flags
+set(ARCH_FLAGS "\
+	-mcpu=cortex-m4 \
+	-mthumb \
+	-mfpu=fpv4-sp-d16 \
+	-mfloat-abi=hard"
 )
-set(CMAKE_C_FLAGS "${STM32WB_COMPILER_OPTIONS} ${COMPILER_OPTIMISATION}" CACHE INTERNAL "c compiler flags")
+set(ERROR_FLAGS "-Wall")
+set(DEBUG_FLAGS "-Og -g -gdwarf-2")
 
-set(EXTRA_LINKER_FLAGS "-lm -lc --specs=nano.specs --specs=nosys.specs ")
-set(CMAKE_EXE_LINKER_FLAGS "${STM32WB_COMPILER_OPTIONS} -Wl,-Map=linker.map -Wl,-cref " CACHE INTERNAL "exe link flags")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${EXTRA_LINKER_FLAGS} -T${LINKER_FILE}")
+# set compiler/assembler/linker flags
+set(CMAKE_C_FLAGS
+	"${ARCH_FLAGS} ${ERROR_FLAGS} ${DEBUG_FLAGS} -fdata-sections -ffunction-sections -Wa,-a,-ad,-alms=build/main.lst"
+	CACHE INTERNAL "asm compiler flags"
+)
+set(CMAKE_ASM_FLAGS
+	"-x assembler-with-cpp ${CMAKE_ASM_FLAGS}"
+	CACHE INTERNAL "c compiler flags"
+)
+set(CMAKE_EXE_LINKER_FLAGS
+	"${ARCH_FLAGS} -specs=nano.specs -lc -lm -lnosys  -Wl,-Map=linker.map,--cref -Wl,--gc-sections"
+	CACHE INTERNAL "exe link flags"
+)
 
-# Externally provided content
+
+### Externally provided content
 add_subdirectory(dependencies)
 
 
-
-# Main targets built by this project (add a separate line here for each project in /projects)
+### Main targets built by this project
 add_subdirectory(projects/blinky)
