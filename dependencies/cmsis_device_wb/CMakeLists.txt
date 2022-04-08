@@ -1,7 +1,7 @@
 FetchContent_GetProperties(cmsis_device_wb)
 if (NOT cmsis_device_wb_POPULATED)
 	FetchContent_Populate(cmsis_device_wb)
-	string(APPEND CMAKE_EXE_LINKER_FLAGS " -T${cmsis_device_wb_SOURCE_DIR}/Source/Templates/gcc/linker/stm32wb55xx_flash_cm4.ld")
+	string(APPEND CMAKE_EXE_LINKER_FLAGS " -T${cmsis_device_wb_SOURCE_DIR}/Source/Templates/gcc/linker/${MCU_LOWER_LONG}_flash_cm4.ld")
 	add_library(cmsis_device_wb INTERFACE)
 	target_include_directories(cmsis_device_wb
 		INTERFACE ${cmsis_device_wb_SOURCE_DIR}/Include
