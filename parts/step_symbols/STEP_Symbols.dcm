@@ -486,6 +486,10 @@ K inductor, coil, l
 F https://product.tdk.com/info/en/documents/catalog/inductor_commercial_decoupling_nlcv32-pf_en.pdf?ref_disty=digikey
 $ENDCMP
 #
+$CMP L_2.2uH
+F https://www.mouser.com/datasheet/2/281/reference_specification_DFE201612E-1101893.pdf
+$ENDCMP
+#
 $CMP L_4.7uH
 D Inductor, 4.7uH, 4.4A, 25mOhm, 20%
 $ENDCMP
@@ -811,6 +815,11 @@ $ENDCMP
 #
 $CMP R_2.2K
 D Resistor, 2.2K, 0.125W, 1%, 0805
+$ENDCMP
+#
+$CMP TPS62840DLCR
+D micro power buck chip 750mA
+F https://www.ti.com/lit/ds/symlink/tps62840.pdf?ts=1649684065696&ref_url=https%253A%252F%252Fwww.google.com%252F
 $ENDCMP
 #
 #End Doc Library
