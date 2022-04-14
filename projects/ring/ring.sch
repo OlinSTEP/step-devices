@@ -101,7 +101,7 @@ F 4 "https://www.digikey.com/en/products/detail/stmicroelectronics/LSM6DSO32TR/1
 	1    6700 6075
 	1    0    0    -1  
 $EndComp
-Text Label 3800 2575 0    50   ~ 0
+Text Label 1800 2875 2    50   ~ 0
 LSM_INT1
 Text Label 3800 2675 0    50   ~ 0
 LSM_INT2
@@ -658,9 +658,9 @@ F 3 "" H 6350 2575 50  0001 C CNN
 	1    6350 2575
 	0    -1   -1   0   
 $EndComp
-Text Label 6400 2400 0    50   ~ 0
-CELL+
 Text Label 6400 2575 0    50   ~ 0
+CELL+
+Text Label 6400 2400 0    50   ~ 0
 CELL-
 Connection ~ 6350 1475
 Wire Wire Line
@@ -923,41 +923,14 @@ Wired for internal LDO \nconfig; see pg 27
 Text Notes 975  1850 0    50   ~ 0
 32MHz External \nclk; required for RF
 Connection ~ 4800 1475
-$Comp
-L step:CSD17318Q2T Q1
-U 1 1 625AFF6F
-P 7875 2125
-F 0 "Q1" V 8027 2171 50  0000 L CNN
-F 1 "CSD17318Q2T" V 8125 1725 50  0000 L CNN
-F 2 "step-footprints:TRANS_CSD17318Q2T" H 8025 2125 50  0001 L BNN
-F 3 "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fcsd17318q2" H 7875 2125 50  0001 L BNN
-F 4 "https://www.digikey.com/en/products/detail/texas-instruments/CSD17318Q2T/7596430" H 9675 2075 50  0001 C CNN "buy"
-	1    7875 2125
-	0    1    1    0   
-$EndComp
-$Comp
-L step:CSD17318Q2T Q2
-U 1 1 625BBCD7
-P 8275 2125
-F 0 "Q2" V 8427 2171 50  0000 L CNN
-F 1 "CSD17318Q2T" V 8525 1750 50  0000 L CNN
-F 2 "step-footprints:TRANS_CSD17318Q2T" H 8425 2125 50  0001 L BNN
-F 3 "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fcsd17318q2" H 8275 2125 50  0001 L BNN
-F 4 "https://www.digikey.com/en/products/detail/texas-instruments/CSD17318Q2T/7596430" H 10075 2075 50  0001 C CNN "buy"
-	1    8275 2125
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
-	7675 2125 7225 2125
-Connection ~ 7225 2125
+	7625 1675 7975 1675
 Wire Wire Line
-	7625 1675 7775 1675
+	7975 1675 7975 1825
 Wire Wire Line
-	7775 1675 7775 1825
+	7625 1475 8275 1475
 Wire Wire Line
-	7625 1475 8375 1475
-Wire Wire Line
-	8375 1475 8375 1825
+	8275 1475 8275 1825
 Wire Wire Line
 	8475 2125 8675 2125
 $Comp
@@ -983,11 +956,6 @@ Text Notes 8050 1050 0    50   ~ 0
 1/3 Resistor Divider \nto uC ADC
 Text Notes 6675 2600 0    50   ~ 0
 Battery Terminal\nSolder Pads\n 
-Wire Wire Line
-	8075 2125 8075 1950
-Connection ~ 8075 2125
-Text Label 8075 1950 0    50   ~ 0
-DRAIN
 $Comp
 L step:LED_0805_Amber D1
 U 1 1 62632341
@@ -1129,4 +1097,19 @@ Text Label 1800 3175 2    50   ~ 0
 BTN_2
 Text Label 1800 3275 2    50   ~ 0
 BTN_3
+$Comp
+L step:AOCA32116E Q1
+U 1 1 6259FF6A
+P 8275 2125
+F 0 "Q1" V 8544 2275 50  0000 C CNN
+F 1 "AOCA32116E" V 8425 1800 50  0000 C CNN
+F 2 "step-footprints:AOCA32116E" H 8275 2125 50  0001 C CNN
+F 3 "http://www.aosmd.com/res/data_sheets/AOCA32116E.pdf" H 8275 2125 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AOCA32116E/12180390" H 8275 2125 50  0001 C CNN "buy"
+	1    8275 2125
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	7775 2125 7225 2125
+Connection ~ 7225 2125
 $EndSCHEMATC
