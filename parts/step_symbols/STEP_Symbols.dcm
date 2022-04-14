@@ -55,6 +55,11 @@ $CMP AD8553ARMZ-REEL
 F https://www.analog.com/media/en/technical-documentation/data-sheets/AD8553.pdf
 $ENDCMP
 #
+$CMP AOCA32116E
+D Drain to Drain 20V NMOS Micro package 
+F http://www.aosmd.com/res/data_sheets/AOCA32116E.pdf
+$ENDCMP
+#
 $CMP ATMEGA16M1
 D Microcontroller, 8-bit, 1KB RAM, 16KB Flash
 $ENDCMP
@@ -165,7 +170,7 @@ F https://toshiba.semicon-storage.com/info/docget.jsp?did=10569&prodName=TLP785
 $ENDCMP
 #
 $CMP CSD17318Q2T
-D NMOS 2x2mm 
+D NMOS 2x2mm
 F https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fcsd17318q2
 $ENDCMP
 #
