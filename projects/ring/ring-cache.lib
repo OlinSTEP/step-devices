@@ -86,6 +86,63 @@ X Dummy_pad 6 1150 -950 300 U 59 59 1 1 U
 ENDDRAW
 ENDDEF
 #
+# step_CSD17318Q2T
+#
+DEF step_CSD17318Q2T Q 0 40 Y N 1 F N
+F0 "Q" 100 200 50 H V L BNN
+F1 "step_CSD17318Q2T" 100 -200 50 H V L BNN
+F2 "TRANS_CSD17318Q2T" 150 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+F4 "https://www.digikey.com/en/products/detail/texas-instruments/CSD17318Q2T/7596430" 1800 -50 50 H I C CNN "buy"
+DRAW
+C 0 -75 5 0 0 16 N
+C 0 75 5 0 0 16 N
+T 0 40 120 32 0 0 0 D Normal 0 L B
+T 0 -190 -50 32 0 0 0 G Normal 0 L B
+T 0 50 -145 32 0 0 0 S Normal 0 L B
+S -110 -100 -80 -50 0 0 0 F
+S -110 -35 -80 35 0 0 0 F
+S -110 50 -80 100 0 0 0 F
+P 2 0 0 6 -144 -100 -200 -100 N
+P 2 0 0 10 -144 95 -144 -100 N
+P 2 0 0 6 -80 -75 0 -75 N
+P 2 0 0 6 -70 0 -20 20 N
+P 2 0 0 12 -60 0 -25 10 N
+P 2 0 0 5 -40 0 -100 0 N
+P 2 0 0 6 -40 0 -70 0 N
+P 2 0 0 5 -40 0 0 0 N
+P 2 0 0 12 -25 -10 -60 0 N
+P 2 0 0 6 -25 0 -40 0 N
+P 2 0 0 12 -25 0 -35 0 N
+P 2 0 0 12 -25 10 -25 0 N
+P 2 0 0 6 -20 -20 -70 0 N
+P 2 0 0 6 -20 20 -20 -20 N
+P 2 0 0 10 0 -200 0 -100 N
+P 2 0 0 6 0 -75 0 -100 N
+P 2 0 0 5 0 0 0 -70 N
+P 2 0 0 6 0 75 -79 75 N
+P 2 0 0 6 0 75 100 75 N
+P 2 0 0 6 0 100 0 75 N
+P 2 0 0 10 0 200 0 100 N
+P 2 0 0 6 75 -25 125 -25 N
+P 2 0 0 6 75 30 100 30 N
+P 2 0 0 6 100 -75 0 -75 N
+P 2 0 0 6 100 30 75 -25 N
+P 2 0 0 6 100 30 100 -75 N
+P 2 0 0 6 100 30 125 30 N
+P 2 0 0 6 100 75 100 30 N
+P 2 0 0 6 125 -25 100 30 N
+X ~ 1 0 200 100 D 40 40 0 0 P
+X ~ 2 0 200 100 D 40 40 0 0 P
+X ~ 3 -300 -100 100 R 40 40 0 0 P
+X ~ 4 0 -200 100 U 40 40 0 0 P
+X ~ 5 0 200 100 D 40 40 0 0 P
+X ~ 6 0 200 100 D 40 40 0 0 P
+X ~ 7 0 -200 100 U 40 40 0 0 P
+X ~ 8 0 200 100 D 40 40 0 0 P
+ENDDRAW
+ENDDEF
+#
 # step_C_0.1uF
 #
 DEF step_C_0.1uF C 0 10 N Y 1 F N
@@ -188,6 +245,30 @@ X ~ 2 0 -100 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# step_LED_0805_Amber
+#
+DEF step_LED_0805_Amber D 0 40 N N 1 F N
+F0 "D" 0 -100 50 H V C CNN
+F1 "step_LED_0805_Amber" 0 100 50 H V C CNN
+F2 "footprints:LED_0805_OEM" -100 0 50 H I C CNN
+F3 "https://media.digikey.com/pdf/Data%20Sheets/Chicago%20Miniature%20Lamps%20PDFs/CMDA5_Series_Rev_Aug_2014.pdf" 0 100 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "L71517CT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/visual-communications-company-vcc/CMDA5DY7D1S/L71517CT-ND/614867" 400 500 60 H I C CNN "PurchasingLink"
+$FPLIST
+ LED*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # step_LSM6DSO32TR
 #
 DEF step_LSM6DSO32TR U 0 10 Y Y 1 F N
@@ -217,42 +298,6 @@ X GND 6 750 -1100 300 U 59 59 1 1 W
 X GND 7 850 -1100 300 U 59 59 1 1 W
 X VDD 8 750 400 300 D 59 59 1 1 W
 X INT2 9 1550 -150 300 L 59 59 1 1 O
-ENDDRAW
-ENDDEF
-#
-# step_L_10nH_LQG15WZ10NJ02D
-#
-DEF step_L_10nH_LQG15WZ10NJ02D L 0 40 Y Y 1 F N
-F0 "L" 0 100 50 H V C CNN
-F1 "step_L_10nH_LQG15WZ10NJ02D" 0 -100 50 H V C CNN
-F2 "Inductor_SMD:L_0402_1005Metric" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-F4 "https://www.digikey.com/en/products/detail/LQG15WZ10NJ02D/490-15244-1-ND/6799909?curr=usd&utm_campaign=buynow&utm_medium=aggregator&utm_source=octopart" 0 0 50 H I C CNN "buy"
-DRAW
-A -60 0 20 1 1799 1 1 0 N -40 0 -80 0
-A -20 0 20 1 1799 1 1 0 N 0 0 -40 0
-A 20 0 20 1 1799 1 1 0 N 40 0 0 0
-A 60 0 20 1 1799 1 1 0 N 80 0 40 0
-X ~ 1 -100 0 20 R 50 50 1 1 P
-X ~ 2 100 0 20 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# step_L_10uH_LQM21FN100M70L
-#
-DEF step_L_10uH_LQM21FN100M70L L 0 40 Y Y 1 F N
-F0 "L" -50 100 50 H V C CNN
-F1 "step_L_10uH_LQM21FN100M70L" 0 -100 50 H V C CNN
-F2 "Inductor_SMD:L_0805_2012Metric" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-F4 "https://www.mouser.com/ProductDetail/Murata-Electronics/LQM21FN100M70L?qs=8M15sSGRUn%252BogwBrvQUwLA%3D%3D" 0 0 50 H I C CNN "buy"
-DRAW
-A -60 0 20 1 1799 1 1 0 N -40 0 -80 0
-A -20 0 20 1 1799 1 1 0 N 0 0 -40 0
-A 20 0 20 1 1799 1 1 0 N 40 0 0 0
-A 60 0 20 1 1799 1 1 0 N 80 0 40 0
-X ~ 1 -100 0 20 R 50 50 1 1 P
-X ~ 2 100 0 20 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -338,6 +383,27 @@ F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf" 
 F4 "DK" 0 0 60 H I C CNN "MFN"
 F5 "P100KCCT-ND" 0 0 60 H I C CNN "MPN"
 F6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1003V/P100KCCT-ND/119551" 480 400 60 H I C CNN "PurchasingLink"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# step_R_1K
+#
+DEF step_R_1K R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "step_R_1K" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" 80 0 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "RNCP0805FTD1K00CT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" 480 400 60 H I C CNN "PurchasingLink"
 $FPLIST
  R_*
  Resistor_*

@@ -164,6 +164,11 @@ K NPN DC Optocoupler
 F https://toshiba.semicon-storage.com/info/docget.jsp?did=10569&prodName=TLP785
 $ENDCMP
 #
+$CMP CSD17318Q2T
+D NMOS 2x2mm 
+F https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fcsd17318q2
+$ENDCMP
+#
 $CMP C_.22uF
 D Capacitor, .22uF, 220nF, 50V, 0805
 F https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_Y5V_6.3V-to-50V_9.pdf
