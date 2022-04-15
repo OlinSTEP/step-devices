@@ -23,21 +23,14 @@ set(LD_OPTION_FLAGS "-Wl,-Map=output.map -Wl,--gc-sections")
 set(ASM_OPTION_FLAGS "-Wa,-a,-ad")
 
 # set compiler/assembler/linker flags
-set(CMAKE_C_FLAGS
-	"${ARCH_FLAGS} ${ERROR_FLAGS} ${DEBUG_FLAGS} ${OPTION_FLAGS} ${ASM_OPTION_FLAGS} ${CMAKE_C_FLAGS}"
-	CACHE INTERNAL "c compiler flags"
+string(APPEND CMAKE_C_FLAGS
+	" ${ARCH_FLAGS} ${ERROR_FLAGS} ${DEBUG_FLAGS} ${OPTION_FLAGS} ${ASM_OPTION_FLAGS}"
 )
-set(CMAKE_CXX_FLAGS
-	"${CMAKE_C_FLAGS} ${CMAKE_CXX_FLAGS}"
-	CACHE INTERNAL "cxx compiler flags"
+string(APPEND CMAKE_CXX_FLAGS
+	" ${CMAKE_C_FLAGS}"
 )
-set(CMAKE_ASM_FLAGS
-	"${ARCH_FLAGS} ${ASM_OPTION_FLAGS} ${CMAKE_ASM_FLAGS}"
-	CACHE INTERNAL "asm compiler flags"
-)
-set(CMAKE_EXE_LINKER_FLAGS
-	"${CMAKE_EXE_LINKER_FLAGS}"
-	CACHE INTERNAL "exe link flags"
+string(APPEND CMAKE_ASM_FLAGS
+	" ${ARCH_FLAGS} ${ASM_OPTION_FLAGS}"
 )
 
 message(STATUS

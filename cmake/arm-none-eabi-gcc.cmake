@@ -30,9 +30,17 @@ set(CMAKE_SIZE				${TOOLCHAIN_PREFIX}-size)
 set(CMAKE_SIZE_UTIL			${TOOLCHAIN_PREFIX}-size CACHE INTERNAL "size tool")
 
 
-set(CMAKE_ASM_FLAGS "-x assembler-with-cpp " CACHE INTERNAL "asm compiler flags")
-set(CMAKE_EXE_LINKER_FLAGS "-Wl,-Map=linker.map -Wl,-cref -Wl,--gc-sections -lm -lc -lnosys --specs=nosys.specs --specs=nano.specs " CACHE INTERNAL "exe link flags")
+# set(CMAKE_C_FLAGS "" CACHE INTERNAL "c compiler flags")
+# set(CMAKE_CXX_FLAGS "" CACHE INTERNAL "cxx compiler flags")
+# set(CMAKE_ASM_FLAGS "-x assembler-with-cpp " CACHE INTERNAL "asm compiler flags")
+# set(CMAKE_EXE_LINKER_FLAGS "-Wl,-Map=linker.map -Wl,-cref -Wl,--gc-sections -lm -lc -lnosys --specs=nosys.specs --specs=nano.specs " CACHE INTERNAL "exe link flags")
 
+set(CMAKE_C_FLAGS "" CACHE INTERNAL "c compiler flags")
+set(CMAKE_ASM_FLAGS "" CACHE INTERNAL "cxx compiler flags")
+set(CMAKE_EXE_LINKER_FLAGS "" CACHE INTERNAL "ld linker flags")
+
+string(APPEND CMAKE_ASM_FLAGS " -x assembler-with-cpp")
+string(APPEND CMAKE_EXE_LINKER_FLAGS " -Wl,-Map=linker.map -Wl,-cref -Wl,--gc-sections -lm -lc -lnosys --specs=nosys.specs --specs=nano.specs")
 
 set(CMAKE_FIND_ROOT_PATH ${BINUTILS_PATH})
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
