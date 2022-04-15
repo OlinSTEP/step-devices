@@ -8,6 +8,11 @@ set(MCU_LOWER_LONG "stm32wb55xx")
 set(MCU_UPPER_SHORT "STM32WBxx")
 set(MCU_LOWER_SHORT "stm32wbxx")
 
+# download linker
+file(DOWNLOAD "https://raw.githubusercontent.com/STMicroelectronics/cmsis_device_wb/master/Source/Templates/gcc/linker/stm32wb55xx_flash_cm4.ld"
+	stm32wb55xx_flash_cm4.ld
+)
+
 # add compile defintions
 add_definitions(-D${MCU_UPPER_LONG})
 
@@ -32,10 +37,7 @@ string(APPEND CMAKE_CXX_FLAGS
 string(APPEND CMAKE_ASM_FLAGS
 	" ${ARCH_FLAGS} ${ASM_OPTION_FLAGS}"
 )
-
-message(STATUS
-    "BUILD FLAGS:\n"
-    "   c flags         : ${CMAKE_C_FLAGS}\n\n"
-    "   ld flags        : ${CMAKE_EXE_LINKER_FLAGS}\n\n"
-    "   asm flags       : ${CMAKE_ASM_FLAGS}\n"
+string(APPEND CMAKE_EXE_LINKER_FLAGS
+	" -T${CMAKE_BINARY_DIR}/stm32wb55xx_flash_cm4.ld"
 )
+

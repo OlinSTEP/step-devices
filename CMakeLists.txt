@@ -18,6 +18,5 @@ include("${MCU}")
 ### Externally provided content
 add_subdirectory(dependencies)
 
-
 ### Main targets built by this project
 add_subdirectory(projects/blinky)
