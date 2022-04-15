@@ -11,8 +11,10 @@ add_executable(${project_name}.elf
 
 add_custom_target(${project_name}.bin ALL
 	COMMAND ${CMAKE_OBJCOPY} -O binary -S ${project_name}.elf ${project_name}.bin
+	DEPENDS ${project_name}.elf
 )
 
+
 target_link_libraries(${project_name}.elf 
-	PRIVATE cmsis_device_wb
+	PRIVATE cmsis
 )

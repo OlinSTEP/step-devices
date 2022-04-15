@@ -6,6 +6,23 @@ if (NOT stm32cubewb_POPULATED)
 	# make variables pointing to directories and source code
 	set(stm32wb_hal_dir ${stm32cubewb_SOURCE_DIR}/Drivers/STM32WBxx_HAL_Driver)
 	set(freertos_dir ${stm32cubewb_SOURCE_DIR}/Middlewares/Third_Party/FreeRTOS/Source)
+	set(cmsis_dir ${stm32cubewb_SOURCE_DIR}/Drivers/CMSIS)
+
+	# CMSIS library
+	add_library(cmsis INTERFACE)
+	target_include_directories(cmsis
+		INTERFACE ${cmsis_dir}/Core/Include
+		INTERFACE ${cmsis_dir}/Device/ST/STM32WBxx/Include
+	)
+
+	# Required CMSIS startup/system files
+	add_library(stm32wb OBJECT
+		${cmsis_dir}/Device/ST/STM32WBxx/Source/Templates/system_${MCU_LOWER_SHORT}.c
+		${cmsis_dir}/Device/ST/STM32WBxx/Source/Templates/gcc/startup_${MCU_LOWER_LONG}_cm4.s
+	)
+	target_link_libraries(stm32wb
+		PRIVATE cmsis
+	)
 
 	# HAL shared object file
 	add_library(stm32wbxx_hal
@@ -35,8 +52,7 @@ if (NOT stm32cubewb_POPULATED)
 		PUBLIC ${stm32cubewb_SOURCE_DIR}/Drivers/STM32WBxx_HAL_Driver/Inc
 	)
 	target_link_libraries(stm32wbxx_hal
-		PRIVATE cmsis_device_wb
-		PRIVATE cmsis_core
+		PRIVATE cmsis
 	)
 
 	# FreeRTOS
