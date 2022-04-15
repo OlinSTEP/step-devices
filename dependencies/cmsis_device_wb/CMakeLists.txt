@@ -6,9 +6,6 @@ if (NOT cmsis_device_wb_POPULATED)
 	target_include_directories(cmsis_device_wb
 		INTERFACE ${cmsis_device_wb_SOURCE_DIR}/Include
 	)
-	target_compile_definitions(cmsis_device_wb
-		INTERFACE -D${MCU_UPPER_LONG}
-	)
 	target_link_libraries(cmsis_device_wb
 		INTERFACE cmsis_core
 	)
