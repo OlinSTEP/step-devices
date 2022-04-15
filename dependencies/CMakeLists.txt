@@ -16,4 +16,8 @@ FetchContent_Declare(cmsis_core
 
 
 add_subdirectory(cmsis_core)
-add_subdirectory(cmsis_device_wb)
+
+string(FIND ${MCU} ${wb} mcu_stm32wb)
+if (NOT mcu_stm32wb EQUAL -1)
+	add_subdirectory(cmsis_device_wb)
+endif()
