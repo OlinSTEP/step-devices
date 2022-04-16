@@ -4,7 +4,7 @@ EELAYER END
 $Descr User 11843 11000
 encoding utf-8
 Sheet 1 1
-Title "RING_PCB"
+Title "RING PCB V0.0"
 Date "2022-04-06"
 Rev "REV1"
 Comp "STEP @ Olin"
@@ -161,7 +161,7 @@ L step:C_100nF C6
 U 1 1 62508D05
 P 4600 1325
 F 0 "C6" H 4625 1400 50  0000 L CNN
-F 1 "C_100nF" H 4450 1625 50  0000 L CNN
+F 1 "C_100nF" H 4400 1625 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4638 1175 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 4625 1425 50  0001 C CNN
 F 4 "KEMET" H 4600 1325 60  0001 C CNN "MFN"
@@ -173,15 +173,15 @@ $EndComp
 $Comp
 L step:C_100nF C2
 U 1 1 625095B1
-P 4200 1325
-F 0 "C2" H 4225 1400 50  0000 L CNN
-F 1 "C_100nF" H 4050 1625 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4238 1175 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 4225 1425 50  0001 C CNN
-F 4 "KEMET" H 4200 1325 60  0001 C CNN "MFN"
-F 5 "C0402C104K9RACTU" H 4200 1325 60  0001 C CNN "MPN"
-F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 4625 1825 60  0001 C CNN "buy"
-	1    4200 1325
+P 4275 1825
+F 0 "C2" H 4300 1900 50  0000 L CNN
+F 1 "C_100nF" V 4500 1475 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric" H 4313 1675 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 4300 1925 50  0001 C CNN
+F 4 "KEMET" H 4275 1825 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 4275 1825 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 4700 2325 60  0001 C CNN "buy"
+	1    4275 1825
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -214,17 +214,6 @@ Wire Wire Line
 	4200 1175 4400 1175
 Connection ~ 4600 1175
 Connection ~ 3800 1175
-$Comp
-L power:GND #PWR0107
-U 1 1 62515C16
-P 4800 1475
-F 0 "#PWR0107" H 4800 1225 50  0001 C CNN
-F 1 "GND" H 4925 1400 50  0000 C CNN
-F 2 "" H 4800 1475 50  0001 C CNN
-F 3 "" H 4800 1475 50  0001 C CNN
-	1    4800 1475
-	1    0    0    -1  
-$EndComp
 Connection ~ 4600 1475
 $Comp
 L step:ANT016008LCS2442MA2 U3
@@ -600,20 +589,6 @@ F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF080
 	1    6600 1825
 	-1   0    0    1   
 $EndComp
-$Comp
-L step:C_0.1uF C12
-U 1 1 625C9CB0
-P 6350 1825
-F 0 "C12" H 6100 1850 50  0000 L CNN
-F 1 "C_0.1uF" H 5950 1750 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6388 1675 50  0001 C CNN
-F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6375 1925 50  0001 C CNN
-F 4 "DK" H 6350 1825 60  0001 C CNN "MFN"
-F 5 "478-3352-1-ND" H 6350 1825 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 6775 2325 60  0001 C CNN "PurchasingLink"
-	1    6350 1825
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6600 1675 6825 1675
 Wire Wire Line
@@ -702,17 +677,6 @@ Connection ~ 6125 1175
 Wire Wire Line
 	6125 1175 6350 1175
 $Comp
-L power:+1V8 #PWR0120
-U 1 1 625FF412
-P 4875 1175
-F 0 "#PWR0120" H 4875 1025 50  0001 C CNN
-F 1 "+1V8" H 4890 1348 50  0000 C CNN
-F 2 "" H 4875 1175 50  0001 C CNN
-F 3 "" H 4875 1175 50  0001 C CNN
-	1    4875 1175
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+1V8 #PWR0121
 U 1 1 6261D39A
 P 7900 5825
@@ -755,25 +719,6 @@ Wire Wire Line
 	7150 5825 7700 5825
 NoConn ~ 3800 3675
 NoConn ~ 3800 3775
-$Comp
-L step:C_100nF C13
-U 1 1 625B50DD
-P 4800 1325
-F 0 "C13" H 4825 1400 50  0000 L CNN
-F 1 "C_100nF" V 4975 1200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4838 1175 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 4825 1425 50  0001 C CNN
-F 4 "KEMET" H 4800 1325 60  0001 C CNN "MFN"
-F 5 "C0402C104K9RACTU" H 4800 1325 60  0001 C CNN "MPN"
-F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 5225 1825 60  0001 C CNN "buy"
-	1    4800 1325
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4600 1175 4800 1175
-Connection ~ 4800 1175
-Wire Wire Line
-	4800 1175 4875 1175
 Wire Wire Line
 	4600 1475 4800 1475
 Wire Wire Line
@@ -918,11 +863,8 @@ Wire Wire Line
 	3800 1575 3800 1475
 Connection ~ 3800 1575
 Connection ~ 3800 1475
-Text Notes 3975 1800 0    50   ~ 0
-Wired for internal LDO \nconfig; see pg 27
 Text Notes 975  1850 0    50   ~ 0
 32MHz External \nclk; required for RF
-Connection ~ 4800 1475
 Wire Wire Line
 	7625 1675 7975 1675
 Wire Wire Line
@@ -1125,4 +1067,109 @@ NoConn ~ 3800 2775
 NoConn ~ 3800 2575
 NoConn ~ 3800 2275
 NoConn ~ 3800 2375
+$Comp
+L step:C_0.1uF C12
+U 1 1 625C9CB0
+P 6350 1825
+F 0 "C12" H 6100 1850 50  0000 L CNN
+F 1 "C_0.1uF" H 5950 1750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6388 1675 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6375 1925 50  0001 C CNN
+F 4 "DK" H 6350 1825 60  0001 C CNN "MFN"
+F 5 "478-3352-1-ND" H 6350 1825 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 6775 2325 60  0001 C CNN "PurchasingLink"
+	1    6350 1825
+	1    0    0    -1  
+$EndComp
+Text Notes 4375 2525 0    50   ~ 0
+uC Power Wired for\ninternal LDO config; \nsee pg 27
+$Comp
+L power:GND #PWR0107
+U 1 1 62515C16
+P 4800 1475
+F 0 "#PWR0107" H 4800 1225 50  0001 C CNN
+F 1 "GND" H 4925 1400 50  0000 C CNN
+F 2 "" H 4800 1475 50  0001 C CNN
+F 3 "" H 4800 1475 50  0001 C CNN
+	1    4800 1475
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V8 #PWR0120
+U 1 1 625FF412
+P 4800 1175
+F 0 "#PWR0120" H 4800 1025 50  0001 C CNN
+F 1 "+1V8" H 4900 1300 50  0000 C CNN
+F 2 "" H 4800 1175 50  0001 C CNN
+F 3 "" H 4800 1175 50  0001 C CNN
+	1    4800 1175
+	1    0    0    -1  
+$EndComp
+$Comp
+L step:C_100nF C13
+U 1 1 625B50DD
+P 4200 1325
+F 0 "C13" H 4225 1400 50  0000 L CNN
+F 1 "C_100nF" H 4025 1625 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4238 1175 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 4225 1425 50  0001 C CNN
+F 4 "KEMET" H 4200 1325 60  0001 C CNN "MFN"
+F 5 "C0402C104K9RACTU" H 4200 1325 60  0001 C CNN "MPN"
+F 6 "https://www.mouser.com/ProductDetail/KEMET/C0402C104K9RACTU?qs=DBJr%252BvBUjU5VnZSA4JeTzg%3D%3D" H 4625 1825 60  0001 C CNN "buy"
+	1    4200 1325
+	1    0    0    -1  
+$EndComp
+$Comp
+L step:C_100pF C7
+U 1 1 625AAC09
+P 4075 1825
+F 0 "C7" H 4100 1900 50  0000 L CNN
+F 1 "C_100pF" V 4425 1475 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric" H 4113 1675 50  0001 C CNN
+F 3 "https://katalog.we-online.de/pbs/datasheet/885012007057.pdf" H 4100 1925 50  0001 C CNN
+F 4 "DK" H 4075 1825 60  0001 C CNN "MFN"
+F 5 "732-7852-1-ND" H 4075 1825 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/wurth-electronics-inc/885012007057/732-7852-1-ND/5454479" H 4500 2325 60  0001 C CNN "PurchasingLink"
+	1    4075 1825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1675 4075 1675
+Wire Wire Line
+	4600 1175 4800 1175
+Connection ~ 4075 1675
+Wire Wire Line
+	4075 1675 4175 1675
+Wire Wire Line
+	4075 1975 4175 1975
+$Comp
+L power:GND #PWR03
+U 1 1 625BA310
+P 4175 1975
+F 0 "#PWR03" H 4175 1725 50  0001 C CNN
+F 1 "GND" H 4180 1802 50  0000 C CNN
+F 2 "" H 4175 1975 50  0001 C CNN
+F 3 "" H 4175 1975 50  0001 C CNN
+	1    4175 1975
+	1    0    0    -1  
+$EndComp
+Connection ~ 4175 1975
+Wire Wire Line
+	4175 1975 4275 1975
+$Comp
+L power:+1V8 #PWR02
+U 1 1 625BA8F7
+P 4175 1675
+F 0 "#PWR02" H 4175 1525 50  0001 C CNN
+F 1 "+1V8" H 4300 1775 50  0000 C CNN
+F 2 "" H 4175 1675 50  0001 C CNN
+F 3 "" H 4175 1675 50  0001 C CNN
+	1    4175 1675
+	1    0    0    -1  
+$EndComp
+Connection ~ 4175 1675
+Wire Wire Line
+	4175 1675 4275 1675
+Text Notes 4575 2025 0    50   ~ 0
+Separate 0201 RF \nDecoupling Cap\n
 $EndSCHEMATC
