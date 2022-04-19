@@ -6,7 +6,7 @@ file(GLOB C_SOURCE
 
 add_executable(${project_name}.elf
 	${C_SOURCE}
-	$<TARGET_OBJECTS:stm32wb>
+	$<TARGET_OBJECTS:stm32wb55xx>
 )
 
 add_custom_target(${project_name}.bin ALL
