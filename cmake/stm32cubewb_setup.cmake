@@ -20,7 +20,46 @@ function(stm32cubewb_setup target)
 				PUBLIC ${stm32wbxx_hal_dir}
 			)
 		endif()
+		if(dep STREQUAL "bsp")
+			target_sources(${target}
+				PRIVATE ${nucleo_wb55_src}
+				PUBLIC ${nucleo_wb55_inc}
+			)
+			target_include_directories(${target}
+				PUBLIC ${nucleo_wb55_dir}
+			)
+			target_compile_definitions(${target}
+				PRIVATE USE_STM32WBXX_NUCLEO
+				PRIVATE USE_HAL_DRIVER
+				PRIVATE DEBUG
+			)
+		endif()
+		if(dep STREQUAL "stm32_wpan")
+			target_sources(${target}
+				PRIVATE ${stm32_wpan_src}
+			)
+			target_include_directories(${target}
+				PUBLIC ${stm32_wpan_dir}
+			)
+		endif()
+		if(dep STREQUAL "lpm")
+			target_sources(${target}
+				PRIVATE ${lpm_src}
+				PUBLIC ${lpm_inc}
+			)
+			target_include_directories(${target}
+				PUBLIC ${lpm_dir}
+			)
+		endif()
+		if(dep STREQUAL "sequencer")
+			target_sources(${target}
+				PRIVATE ${sequencer_src}
+				PUBLIC ${sequencer_inc}
+			)
+			target_include_directories(${target}
+				PUBLIC ${sequencer_dir}
+			)
+		endif()
 	endforeach()
 	get_target_property(result ${target} INCLUDE_DIRECTORIES)
-	message(STATUS ${result})
 endfunction()

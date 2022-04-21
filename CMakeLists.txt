@@ -20,3 +20,4 @@ add_subdirectory(dependencies)
 
 ### Main targets built by this project
 add_subdirectory(projects/blinky)
+add_subdirectory(projects/bt-demo)

@@ -4,6 +4,10 @@ FetchContent_GetProperties(stm32cubewb)
 set(stm32wbxx_hal_directory ${stm32cubewb_SOURCE_DIR}/Drivers/STM32WBxx_HAL_Driver)
 set(cmsis_directory ${stm32cubewb_SOURCE_DIR}/Drivers/CMSIS)
 set(freertos_directory ${stm32cubewb_SOURCE_DIR}/Middlewares/Third_Party/FreeRTOS/Source)
+set(bsp_directory ${stm32cubewb_SOURCE_DIR}/Drivers/BSP)
+set(stm32_wpan_directory ${stm32cubewb_SOURCE_DIR}/Middlewares/ST/STM32_WPAN)
+set(lpm_directory ${stm32cubewb_SOURCE_DIR}/Utilities/lpm)
+set(sequencer_directory ${stm32cubewb_SOURCE_DIR}/Utilities/sequencer)
 
 # CMSIS
 set(cmsis_dir
@@ -177,6 +181,74 @@ set(stm32wbxx_hal_inc
     ${stm32wbxx_hal_directory}/Inc/stm32wbxx_ll_usb.h
     ${stm32wbxx_hal_directory}/Inc/stm32wbxx_ll_utils.h
     ${stm32wbxx_hal_directory}/Inc/stm32wbxx_ll_wwdg.h
+)
+
+# nucelo wb55 bsp
+set(nucleo_wb55_src
+    ${bsp_directory}/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c
+)
+set(nucleo_wb55_inc
+    ${bsp_directory}/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.h
+)
+set(nucleo_wb55_dir
+    ${bsp_directory}/P-NUCLEO-WB55.Nucleo
+)
+
+
+# stm32_wpan
+set(stm32_wpan_src
+    ${stm32_wpan_directory}/ble/core/auto/ble_gap_aci.c
+    ${stm32_wpan_directory}/ble/core/auto/ble_gatt_aci.c
+    ${stm32_wpan_directory}/ble/core/auto/ble_hal_aci.c
+    ${stm32_wpan_directory}/ble/core/auto/ble_hci_le.c
+    ${stm32_wpan_directory}/utilities/dbg_trace.c
+    ${stm32_wpan_directory}/interface/patterns/ble_thread/tl/hci_tl.c
+    ${stm32_wpan_directory}/interface/patterns/ble_thread/tl/hci_tl_if.c
+    ${stm32_wpan_directory}/ble/core/template/osal.c
+    ${stm32_wpan_directory}/utilities/otp.c
+    ${stm32_wpan_directory}/interface/patterns/ble_thread/shci/shci.c
+    ${stm32_wpan_directory}/interface/patterns/ble_thread/tl/shci_tl.c
+    ${stm32_wpan_directory}/interface/patterns/ble_thread/tl/shci_tl_if.c
+    ${stm32_wpan_directory}/utilities/stm_list.c
+    ${stm32_wpan_directory}/utilities/stm_queue.c
+    ${stm32_wpan_directory}/ble/svc/Src/svc_ctl.c
+    ${stm32_wpan_directory}/interface/patterns/ble_thread/tl/tl_mbox.c 
+)
+
+set(stm32_wpan_dir
+    ${stm32_wpan_directory}
+    ${stm32_wpan_directory}/interface/patterns/ble_thread
+    ${stm32_wpan_directory}/interface/patterns/ble_thread/tl
+    ${stm32_wpan_directory}/interface/patterns/ble_thread/shci
+    ${stm32_wpan_directory}/utilities
+    ${stm32_wpan_directory}/ble/core
+    ${stm32_wpan_directory}/ble/core/auto
+    ${stm32_wpan_directory}/ble/core/template
+    ${stm32_wpan_directory}/ble/svc/Inc
+    ${stm32_wpan_directory}/ble/svc/Src
+    ${stm32_wpan_directory}/ble
+)
+
+# lpm
+set(lpm_src
+    ${lpm_directory}/tiny_lpm/stm32_lpm.c
+)
+set(lpm_inc
+    ${lpm_directory}/tiny_lpm/stm32_lpm.h
+)
+set(lpm_dir
+    ${lpm_directory}/tiny_lpm
+)
+
+# sequencer
+set(sequencer_src
+    ${sequencer_directory}/stm32_seq.c
+)
+set(sequencer_inc
+    ${sequencer_directory}/stm32_seq.h
+)
+set(sequencer_dir
+    ${sequencer_directory}
 )
 
 # FreeRTOS

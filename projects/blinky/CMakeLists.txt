@@ -7,11 +7,8 @@ file(GLOB C_SOURCE
 add_executable(${project_name}.elf
 	${C_SOURCE}
 )
-target_include_directories(${project_name}.elf
-	PUBLIC ${CMAKE_CURRENT_LIST_DIR}/config
-)
 
-stm32cubewb_setup(${project_name}.elf "cmsis" "hal")
+stm32cubewb_setup(${project_name}.elf "cmsis")
 
 add_custom_target(${project_name}.bin ALL
 	COMMAND ${CMAKE_OBJCOPY} -O binary -S ${project_name}.elf ${project_name}.bin
