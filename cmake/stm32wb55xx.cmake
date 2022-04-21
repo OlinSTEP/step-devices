@@ -25,7 +25,7 @@ set(ERROR_FLAGS "-Wall")
 set(DEBUG_FLAGS "-Og -g -gdwarf-2")
 set(OPTION_FLAGS "-fdata-sections -ffunction-sections")
 set(LD_OPTION_FLAGS "-Wl,-Map=output.map -Wl,--gc-sections")
-set(ASM_OPTION_FLAGS "-Wa,-a,-ad")
+set(ASM_OPTION_FLAGS "")
 
 # set compiler/assembler/linker flags
 string(APPEND CMAKE_C_FLAGS
