@@ -1,11 +1,11 @@
 function(stm32cubewb_setup target)
 	include(stm32cubewb_files)
+	if(${MCU} STREQUAL "stm32wb55xx")
+		target_sources(${target}
+			PRIVATE ${stm32wb55xx_system_src}
+		)
+	endif()
 	foreach(dep IN LISTS ARGN)
-		if(${MCU} STREQUAL "stm32wb55xx")
-			target_sources(${target}
-				PRIVATE ${stm32wb55xx_system_sir}
-			)
-		endif()
 		if(dep STREQUAL "cmsis")
 			target_include_directories(${target}
 				PUBLIC ${cmsis_dir}
