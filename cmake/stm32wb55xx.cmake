@@ -10,7 +10,7 @@ set(MCU_LOWER_SHORT "stm32wbxx")
 
 # download linker
 file(DOWNLOAD "https://raw.githubusercontent.com/STMicroelectronics/cmsis_device_wb/master/Source/Templates/gcc/linker/stm32wb55xx_flash_cm4.ld"
-	stm32wb55xx_flash_cm4.ld
+	${CMAKE_BINARY_DIR}/stm32wb55xx_flash_cm4.ld
 )
 
 # add compile defintions
