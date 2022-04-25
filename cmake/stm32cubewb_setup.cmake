@@ -60,6 +60,15 @@ function(stm32cubewb_setup target)
 				PUBLIC ${sequencer_dir}
 			)
 		endif()
+		if(dep STREQUAL "rtos")
+			target_sources(${target}
+				PRIVATE ${freertos_cm4_src}
+				PUBLIC ${freertos_cm4_inc}
+			)
+			target_include_directories(${target}
+				PUBLIC ${freertos_cm4_dir}
+			)
+		endif()
 	endforeach()
 	get_target_property(result ${target} INCLUDE_DIRECTORIES)
 endfunction()
