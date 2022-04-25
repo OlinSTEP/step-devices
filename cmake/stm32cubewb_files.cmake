@@ -255,10 +255,10 @@ set(sequencer_dir
 set(freertos_cm4_src
     ${freertos_directory}/portable/GCC/ARM_CM4F/port.c
     ${freertos_directory}/portable/MemMang/heap_1.c
-    ${freertos_directory}/portable/MemMang/heap_2.c
-    ${freertos_directory}/portable/MemMang/heap_3.c
-    ${freertos_directory}/portable/MemMang/heap_4.c
-    ${freertos_directory}/portable/MemMang/heap_5.c
+    # ${freertos_directory}/portable/MemMang/heap_2.c
+    # ${freertos_directory}/portable/MemMang/heap_3.c
+    # ${freertos_directory}/portable/MemMang/heap_4.c
+    # ${freertos_directory}/portable/MemMang/heap_5.c
     ${freertos_directory}/croutine.c
     ${freertos_directory}/event_groups.c
     ${freertos_directory}/list.c
@@ -266,6 +266,7 @@ set(freertos_cm4_src
     ${freertos_directory}/stream_buffer.c
     ${freertos_directory}/tasks.c
     ${freertos_directory}/timers.c
+	${freertos_directory}/CMSIS_RTOS/cmsis_os.c
 )
 
 set(freertos_cm4_inc
@@ -273,7 +274,6 @@ set(freertos_cm4_inc
     ${freertos_directory}/include/croutine.h
     ${freertos_directory}/include/deprecated_definitions.h
     ${freertos_directory}/include/event_groups.h
-    ${freertos_directory}/include/FreeRTOSConfig_template.h
     ${freertos_directory}/include/FreeRTOS.h
     ${freertos_directory}/include/list.h
     ${freertos_directory}/include/message_buffer.h
@@ -290,4 +290,11 @@ set(freertos_cm4_inc
     ${freertos_directory}/include/task.h
     ${freertos_directory}/include/timers.h
     ${freertos_directory}/portable/GCC/ARM_CM4F/portmacro.h
+	${freertos_directory}/CMSIS_RTOS/cmsis_os.h
+)
+
+set(freertos_cm4_dir
+	${freertos_directory}/include
+	${freertos_directory}/portable/GCC/ARM_CM4F
+	${freertos_directory}/CMSIS_RTOS
 )
