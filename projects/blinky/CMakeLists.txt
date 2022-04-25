@@ -13,7 +13,7 @@ add_executable(${project_name}.elf)
 
 stm32cubewb_setup(${project_name}.elf "cmsis")
 
-target_sources(${proect_name}.elf
+target_sources(${project_name}.elf
 	PRIVATE ${C_SOURCE}
 	PUBLIC ${C_INCLUDE}
 )
