@@ -18,16 +18,10 @@ PinButton rightButton(rightButtonPin, INPUT);
 PinButton upButton(upButtonPin, INPUT);
 PinButton selectButton(selectButtonPin, INPUT);
 
-
-int lButtonState = 1;
-int rButtonState = 1;
-int selectButtonState = 1;
-int ejectButtonState = 1;
-int downButtonState = 1;
-
 void setup() {
   Serial.begin(115200);
   Serial.println("Starting BLE work!");
+  bleKeyboard.setName("STEP Button Controller");
   bleKeyboard.begin();
   pinMode(leftButtonPin, INPUT_PULLUP);
   pinMode(rightButtonPin, INPUT_PULLUP);
@@ -53,7 +47,7 @@ void loop() {
       bleKeyboard.press(KEY_LEFT_ALT);
       bleKeyboard.write(KEY_LEFT_ARROW);
       sent = true;
-      delay(100);
+      delay(20);
     }
     
     rightButton.update();
@@ -79,11 +73,19 @@ void loop() {
     }
 
     upButton.update();
-    if (upButton.isClick()) {
+    if (upButton.isDoubleClick()) {
       Serial.println("EJECT");
       bleKeyboard.write(KEY_MEDIA_EJECT);
       sent = true;
       delay(100);
+    } else if (upButton.isClick()) {
+      Serial.println("UP");
+      bleKeyboard.releaseAll();
+      bleKeyboard.press(KEY_LEFT_CTRL);
+      bleKeyboard.press(KEY_LEFT_ALT);
+      bleKeyboard.write(KEY_UP_ARROW);
+      sent = true;
+      delay(20);
     }
 
     

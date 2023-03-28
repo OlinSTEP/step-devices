@@ -1,10 +1,9 @@
 /**
- * This example turns the ESP32 into a Bluetooth LE keyboard that writes the words, presses Enter, presses a media key and then Ctrl+Alt+Delete
- */
+   This example turns the ESP32 into a Bluetooth LE keyboard that writes the words, presses Enter, presses a media key and then Ctrl+Alt+Delete
+*/
 #include <BleKeyboard.h>
 #include <RotaryEncoder.h>
 #include <PinButton.h>
-
 
 const int PIN_ENCODER_A = 15;
 const int PIN_ENCODER_B = 32;
@@ -39,6 +38,7 @@ int lastState = 0;  // 0 nothing, 1 left, 2 right, 3 select, 4 up, 5 down
 void setup() {
   Serial.begin(115200);
   Serial.println("Starting BLE work!");
+  bleKeyboard.setName("STEP Clicky Controller");
   bleKeyboard.begin();
   pinMode(downButtonPin, INPUT_PULLDOWN);
   pinMode(upButtonPin, INPUT_PULLDOWN);
@@ -51,7 +51,7 @@ void setup() {
 }
 
 void loop() {
-  if(bleKeyboard.isConnected()) {
+  if (bleKeyboard.isConnected()) {
     int curr_rotary = encoder.getPosition();
     bool didScroll = false;
     RotaryEncoder::Direction direction = encoder.getDirection();
@@ -95,11 +95,11 @@ void loop() {
 
     rightButton.update();
     if (rightButton.isClick()) {
-        lastState = 2;
-        bleKeyboard.press(KEY_LEFT_CTRL);
-        bleKeyboard.press(KEY_LEFT_ALT);
-        bleKeyboard.write(0x68);
-        delay(100);
+      lastState = 2;
+      bleKeyboard.press(KEY_LEFT_CTRL);
+      bleKeyboard.press(KEY_LEFT_ALT);
+      bleKeyboard.write(0x68);
+      delay(100);
     }
 
     selectButtonState = digitalRead(selectButton);
@@ -148,20 +148,20 @@ void loop() {
       bleKeyboard.write(KEY_DOWN_ARROW);
       delay(20);
     }
-    
-//
-//    downButtonState = digitalRead(downButton);
-//    if (downButtonState == 0 && lastState != 5) {
-//      Serial.println("down button");
-//      lastState = 5;
-//      bleKeyboard.releaseAll();
-//      bleKeyboard.press(KEY_LEFT_CTRL);
-//      bleKeyboard.press(KEY_LEFT_ALT);
-//      bleKeyboard.write(0x68);
-//      delay(100);
-//    }
 
-    
+    //
+    //    downButtonState = digitalRead(downButton);
+    //    if (downButtonState == 0 && lastState != 5) {
+    //      Serial.println("down button");
+    //      lastState = 5;
+    //      bleKeyboard.releaseAll();
+    //      bleKeyboard.press(KEY_LEFT_CTRL);
+    //      bleKeyboard.press(KEY_LEFT_ALT);
+    //      bleKeyboard.write(0x68);
+    //      delay(100);
+    //    }
+
+
     if (selectButtonState == 1 && rButtonState == 1 && lButtonState == 1 && upButtonState == 1 && downButtonState == 1 && lastState != 0 && !didScroll) {
       lastState = 0;
       bleKeyboard.releaseAll();
